@@ -1,5 +1,4 @@
 class QuestionsController < ApplicationController
-  # Инициализируем объект вопрос для экшенов кроме :edit, :update, :destroy
   before_action :load_question, only: [:edit, :update, :destroy]
   before_action :authorize_user, except: [:create]
 

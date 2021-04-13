@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
     length: { maximum: 40 },
     format: { with: VALIDATE_NAME }
 
+
   def downcase_username
     username&.downcase!
   end
