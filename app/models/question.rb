@@ -1,8 +1,5 @@
-class Question < ApplicationRecord
+class Question < ActiveRecord::Base
   belongs_to :user
 
-  validates :text, :text, presence: true
-
-
-
+  validates :user, :text, presence: true
 end
