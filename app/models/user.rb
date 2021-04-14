@@ -1,7 +1,6 @@
 require 'openssl'
 
 class User < ActiveRecord::Base
-
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
   VALIDATE_NAME = /\A\w+\z/
@@ -25,7 +24,6 @@ class User < ActiveRecord::Base
     uniqueness: true,
     length: { maximum: 40 },
     format: { with: VALIDATE_NAME }
-
 
   def downcase_username
     username&.downcase!
