@@ -1,6 +1,6 @@
 require 'openssl'
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   ITERATIONS = 20_000
   DIGEST = OpenSSL::Digest::SHA256.new
   VALIDATE_NAME = /\A\w+\z/
