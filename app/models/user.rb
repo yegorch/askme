@@ -25,14 +25,6 @@ class User < ActiveRecord::Base
     length: { maximum: 40 },
     format: { with: VALIDATE_NAME }
 
-  def downcase_username
-    username&.downcase!
-  end
-
-  def downcase_email
-    email&.downcase!
-  end  
-
   def self.hash_to_string(password_hash)
     password_hash.unpack('H*')[0]
   end
@@ -52,6 +44,14 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def downcase_username
+    username&.downcase!
+  end
+
+  def downcase_email
+    email&.downcase!
+  end  
 
   def encrypt_password
     if password.present?
