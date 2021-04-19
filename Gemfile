@@ -10,6 +10,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'listen', '~> 3.1.5'
