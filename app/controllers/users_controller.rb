@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :create, :new]
   before_action :authorize_user, except: [:index, :new, :create, :show]
-  before_action :authorize_user, only: [:destroy]
 
   def index
     @users = User.all.order(created_at: :asc)
@@ -48,7 +47,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to root_path
+    session[:user_id] = nil
   end
 
   private
