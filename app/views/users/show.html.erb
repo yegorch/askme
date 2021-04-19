@@ -7,10 +7,6 @@
     <%= link_to 'Редактировать профиль', edit_user_path(@user) if current_user == @user %>
   </div>
 
-  <div class="buffer-both">
-  <%= link_to 'Удалить аккаунт', user_path(@user), method: :delete %>
-  </div>
-
   <div class="user-image-div">
     <%= image_tag user_avatar(@user), class: 'user-image', alt: '[Фото]' %>
   </div>
