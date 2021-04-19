@@ -25,6 +25,8 @@ class User < ApplicationRecord
     length: { maximum: 40 },
     format: { with: VALIDATE_NAME }
 
+  validates :profile_color, format: { with: /\A#\h{6}\z/ }
+
   def self.hash_to_string(password_hash)
     password_hash.unpack('H*')[0]
   end

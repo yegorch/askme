@@ -1,10 +1,14 @@
-<div class="user-header text-center">
+<div class="user-header text-center" style="background: <%= @user.profile_color %>">
   <h1 class="title-medium">
     <%= @user.name %>
   </h1>
 
   <div class="buffer-both">
     <%= link_to 'Редактировать профиль', edit_user_path(@user) if current_user == @user %>
+  </div>
+
+  <div class="buffer-both">
+  <%= link_to 'Удалить аккаунт', user_path(@user), method: :delete %>
   </div>
 
   <div class="user-image-div">
