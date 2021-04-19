@@ -7,7 +7,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug'
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3'
 end
 
 group :production do
