@@ -12,7 +12,6 @@ class UsersController < ApplicationController
   end
 
   def create
-  
     redirect_to root_url, alert: 'Вы уже вошли' if current_user.present?
 
     @user = User.new(user_params)

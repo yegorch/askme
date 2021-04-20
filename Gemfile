@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 6.1.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'turbolinks', '~> 5'
 
 
 group :development, :test do
