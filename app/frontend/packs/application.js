@@ -6,6 +6,6 @@ import "channels"
 Rails.start()
 ActiveStorage.start()
 
-import '../styles/application'
+import '../styles/aplication'
 
 const images = require.context('../images', true)
