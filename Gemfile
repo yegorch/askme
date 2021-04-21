@@ -4,6 +4,7 @@ gem 'rails', '~> 6.1.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
+gem 'webpacker', '~> 4.0' 
 
 
 group :development, :test do
