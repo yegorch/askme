@@ -362,3 +362,17 @@ body {
 .question-actions a {
   margin-left: 10px;
 }
+
+.question-author {
+  background-color: #005a55;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.question-author a {
+  color: #fff
+}
