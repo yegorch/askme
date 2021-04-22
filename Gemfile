@@ -7,7 +7,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'webpacker', '~> 5.0' 
 
-
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3', '~> 1.4'

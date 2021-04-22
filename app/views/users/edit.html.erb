@@ -52,7 +52,7 @@
       </div>
 
       <div class="buffer-both">
-      <%= link_to 'Удалить аккаунт', user_path(@user), method: :delete %>
+      <%= link_to 'Удалить аккаунт', user_path(@user), data: {confirm: 'Точно удалить?'}, method: :delete %>
       </div>
     <% end %>
   </div>
