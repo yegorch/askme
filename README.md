@@ -1,24 +1,24 @@
-# README
+# Askme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение "Askme" клон сайта ask.fm. Приложение написано на rails 6.1.3 и ruby 2.7.2
 
-Things you may want to cover:
+Рабочая версия сайта:
+https://askprog.herokuapp.com/
 
-* Ruby version
+# Настройка
 
-* System dependencies
+1. Для установки зависимостей 
+```
+bundle install
+```
+2. Для установки миграций
+```
+bundle exec rails db:migrate
+```
+3. Запуск приложения
+```
+bundle exec rails s
+```
+4. В браузере перейти по адресу: http://localhost:3000/
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
