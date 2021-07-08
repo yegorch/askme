@@ -20,12 +20,12 @@
       <% if current_user %>
         <%# Даем ссылки на его профиль и на логаут %>
         <%= link_to "@#{current_user.username}", user_path(current_user) %> |
-        <%= link_to 'Выйти', log_out_path %>
+        <%= link_to 'Выйти', session_path, data: {method: :delete} %>
       <% else %>
         <%# Если нету — ссылки на регистрацию и логин %>
-        <%= link_to 'Зарегистрироваться', sign_up_path,
+        <%= link_to 'Зарегистрироваться', new_user_path,
           class: 'button button-light button-small' %>
-        <%= link_to 'Войти', log_in_path,
+        <%= link_to 'Войти', new_session_path,
           class: 'button button-light button-small' %>
       <% end %>
     </div>
@@ -34,9 +34,6 @@
 
 <div class="content">
   <div class="container">
-    <%# Выводим сообщение об ошибке или уведомление для пользователя. %>
-    <%# Если в объеккте flash есть что-то, выводим содержимое на страницу, %>
-    <%# если нет, игнорируем этот блок. %>
     <% if flash.any? %>
       <div class="content-wrapper buffer-both">
         <% flash.each do |name, message| %>
