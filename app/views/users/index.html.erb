@@ -1,3 +1,12 @@
+<% unless @hashtags.count.zero? %>
+  <div class="content-wrapper buffer-both text-center">
+    <h1 class="title-medium">Вопросы с хэштегом</h1>
+    <% @hashtags.each do |hashtag| %>
+      <%= link_to "##{hashtag.name}" , hashtag_path(hashtag.name), class: "text-lead" %>
+    <% end %>
+  </div>
+<% end %>
+
 <div class="content-wrapper buffer-both text-center">
   <div class="buffer-both">
     <h1 class="title-medium">Наши пользователи</h1>
