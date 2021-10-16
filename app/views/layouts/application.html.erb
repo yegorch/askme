@@ -20,7 +20,6 @@
         <%= link_to "@#{current_user.username}", user_path(current_user) %> |
         <%= link_to 'Выйти', session_path, data: {method: :delete} %>
       <% else %>
-        <%# Если нету — ссылки на регистрацию и логин %>
         <%= link_to 'Зарегистрироваться', new_user_path,
           class: 'button button-light button-small' %>
         <%= link_to 'Войти', new_session_path,
