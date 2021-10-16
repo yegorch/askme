@@ -16,9 +16,7 @@
       <h1 class="header-title"><%= link_to "Хорошие вопросы", root_path %></h1>
     </div>
     <div class="header-nav">
-      <%# Если есть текущий юзер (значит он залогинен) %>
       <% if current_user %>
-        <%# Даем ссылки на его профиль и на логаут %>
         <%= link_to "@#{current_user.username}", user_path(current_user) %> |
         <%= link_to 'Выйти', session_path, data: {method: :delete} %>
       <% else %>
